@@ -1,76 +1,88 @@
-# Dag 10 · GitHub och publicering
+# Day 10 · GitHub and Publishing
 
-*Modul 4, UI/UX & Frontendutveckling, Lexicon IT-Proffs*
+_Module 4, UI/UX & Frontend Development, Lexicon IT-Proffs_
 
-## Vad du ska göra idag
+## What you will do today
 
-Du skickar upp ditt arbete med `git push` och publicerar sidan på riktigt med GitHub Pages. Du får en publik adress som alla kan öppna.
+You will upload your work with `git push` and publish your site using GitHub Pages. You will get a public URL that anyone can open.
 
-## Bakgrund
+## Background
 
-Hittills har dina commits bara funnits på din dator. Ett *remote* repo på GitHub är både en säkerhetskopia och ett sätt att dela. **GitHub Pages** gör att GitHub visar dina HTML-filer som en riktig webbplats på `https://ditt-namn.github.io/repo/`.
+So far, your commits have only existed on your computer. A _remote_ repository on GitHub serves as both a backup and a way to share your work. **GitHub Pages** lets GitHub display your HTML files as a real website at `https://your-name.github.io/repo/`.
 
-## Så arbetar du (samma som alltid)
+## How to work (as usual)
 
-1. **Forka** dagens repo på GitHub (*Fork → Create fork*).
-2. **Klona din fork:** *Code → HTTPS → kopiera adressen*. I terminalen (Ctrl+ö i VS Code): `git clone <adressen>`. Öppna den nya mappen i VS Code och starta *Live Server*.
-3. **Gör uppgiften.** Spara och kontrollera i webbläsaren efter varje steg. Gör en commit efter varje avslutat steg: `git add .` och `git commit -m "Beskriv vad du gjorde"`.
-4. **Skicka upp** när du är klar: `git push`.
-5. **Lämna in i Microsoft Forms.**
+1. **Fork** today's repository on GitHub (_Fork → Create fork_).
+2. **Clone your fork:** _Code → HTTPS → copy the URL_. In the terminal (Ctrl+ö in VS Code): `git clone <url>`. Open the new folder in VS Code and start _Live Server_.
+3. **Complete the assignment.** Save and check your work in the browser after each step. Make a commit after each completed step: `git add .` and `git commit -m "Describe what you did"`.
+4. **Push** when you are done: `git push`.
+5. **Submit in Microsoft Forms.**
 
-Fastnar du: skriv ner exakt var och vad du försökt, och ta det först i nästa handledda pass.
+If you get stuck, write down exactly where you got stuck and what you have tried, and bring it up first in the next guided session.
 
-## Uppgiften steg för steg
+## The assignment step by step
 
-### Steg 1. Kontrollera kopplingen
+### Step 1. Check the remote connection
 
-I terminalen: `git remote -v`. Du ska se `origin` med adressen till din fork på GitHub. Det kommer från att du klonade den.
+In the terminal, run `git remote -v`. You should see `origin` with the URL of your fork on GitHub. This was set up when you cloned it.
 
-### Steg 2. Kontrollera historiken på GitHub
+### Step 2. Check the history on GitHub
 
-Öppna din fork på GitHub och klicka *Commits*. Dina commits sedan dag 1 ska synas. Det är samma `git push` som du kört hela tiden. Första gången kan GitHub ha bett dig logga in, och det behövs normalt inte igen.
+Open your fork on GitHub and click _Commits_. Your commits since day 1 should be visible. This is the same `git push` you have been using all along. GitHub may have asked you to sign in the first time; you normally do not need to do that again.
 
-### Steg 3. Gör en commit och push i ett svep
+### Step 3. Commit and push in one go
 
-Ändra något litet, kör `git add .`, `git commit -m "..."` och `git push`. Verifiera på GitHub. Du har nu den vanliga arbetsloopen: ändra, add, commit, push.
+Make a small change, then run `git add .`, `git commit -m "..."`, and `git push`. Verify the change on GitHub. You now have the standard workflow: edit, add, commit, push.
 
-### Steg 4. Slå på GitHub Pages
+### Step 4. Enable GitHub Pages
 
-På GitHub, i din fork: *Settings → Pages*. Under *Build and deployment*: Source = *Deploy from a branch*, Branch = `main`, mapp `/ (root)`. Spara. Vänta 1–2 minuter.
+In your fork on GitHub, go to _Settings → Pages_. Under _Build and deployment_: Source = _Deploy from a branch_, Branch = `main`, folder `/ (root)`. Save. Wait 1–2 minutes.
 
-### Steg 5. Öppna din sida
+### Step 5. Open your site
 
-Överst på Pages-inställningen visas adressen. Öppna den. Fungerar bilderna och CSS:en? Annars: kontrollera att sökvägarna är relativa (`css/base.css`, inte `/css/base.css`).
+The URL appears at the top of the Pages settings. Open it. Are the images and CSS working? If not, check that the paths are relative (`css/base.css`, not `/css/base.css`).
 
-### Steg 6. Skriv README
+### Step 6. Write the README
 
-Redigera `README.md`: rubrik, en mening om vad sajten är, länk till live-sidan, och vilka tekniker du använt. Commit, push.
+Edit `README.md`: include a title, one sentence about the site, a link to the live site, and the technologies you used. Commit and push.
 
-## Kontrollista: så vet du att du är klar
+## Checklist: how to know you are done
 
-- [ ] `git push` har skickat upp alla dina commits.
-- [ ] Din fork har GitHub Pages påslaget, och live-länken fungerar.
-- [ ] Bilder och CSS laddas på den publicerade sidan.
-- [ ] README.md beskriver projektet och innehåller live-länken.
-- [ ] Du har skickat in länken till din fork och din live-länk.
+- [ ] `git push` has uploaded all your commits.
+- [ ] GitHub Pages is enabled for your fork, and the live link works.
+- [ ] Images and CSS load on the published site.
+- [ ] README.md describes the project and includes the live link.
+- [ ] You have submitted the link to your fork and your live link.
 
-## Tips om du fastnar
+## Tips if you get stuck
 
-- 404 på sidan? Vänta några minuter och kontrollera att filen heter exakt `index.html` i rotmappen.
-- Bilderna saknas? Sökvägar får inte börja med `/` och filnamn är känsliga för versaler.
-- Repot måste vara publikt för att Pages ska fungera på ett gratiskonto.
-- Push avvisas? Kör `git pull` först och försök igen.
+- Getting a 404? Wait a few minutes and check that the file is named exactly `index.html` in the root folder.
+- Missing images? Paths must not start with `/`, and filenames are case-sensitive.
+- The repository must be public for Pages to work on a free account.
+- Push rejected? Run `git pull` first and try again.
 
-## Inlämning
+## Submission
 
-**Deadline: imorgon klockan 09.00.** Allt lämnas in i Microsoft Forms. Du behöver inte redovisa något muntligt.
+**Deadline: tomorrow at 09:00.** Submit everything in Microsoft Forms. No oral presentation is required.
 
-I formuläret fyller du i:
+Fill in the following in the form:
 
-1. Länk till din fork av det här repot.
-2. Reflektion: Klistra in live-länken. Vad var det första du tänkte när du öppnade din publicerade sida?
+1. A link to your fork of this repository.
+2. Reflection: Paste the live link. What was your first thought when you opened your published site?
 
-## Vill du mer? (frivilligt)
+## Want to do more? (optional)
 
-- Lägg till en `.gitignore`.
-- Lägg till en skärmbild av sidan i README.md.
+- Add a `.gitignore`.
+- Add a screenshot of the site to README.md.
+
+# Kafé Kardemumma
+
+En responsiv webbplats för ett fiktivt kafé med meny och kontaktsida.
+
+[Besök webbplatsen](https://thanosgarg.github.io/Thanos-m4-dag10-github-och-publicering/)
+
+## Tekniker
+
+- HTML
+- CSS
+- GitHub Pages
